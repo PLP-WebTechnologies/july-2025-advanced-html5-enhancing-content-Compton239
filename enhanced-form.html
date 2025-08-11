@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced HTML5 Content & Form</title>
+</head>
+<body>
+    <header>
+        <h1>Explore Our Learning Platform</h1>
+        <nav>
+            <ul>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#register">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="courses">
+            <h2>Our Courses</h2>
+            <p>Discover our range of educational offerings designed to enhance your skills.</p>
+            <ol>
+                <li>Web Development Fundamentals
+                    <ul>
+                        <li>HTML5 & CSS3</li>
+                        <li>JavaScript Basics</li>
+                    </ul>
+                </li>
+                <li>Data Science Essentials
+                    <ul>
+                        <li>Python for Data Analysis</li>
+                        <li>Machine Learning Basics</li>
+                    </ul>
+                </li>
+                <li>Graphic Design Mastery
+                    <ul>
+                        <li>Adobe Photoshop</li>
+                        <li>UI/UX Principles</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+
+        <section id="schedule">
+            <h2>Course Schedule</h2>
+            <table>
+                <caption>Upcoming Course Dates</caption>
+                <thead>
+                    <tr>
+                        <th>Course</th>
+                        <th>Start Date</th>
+                        <th>Duration</th>
+                        <th>Instructor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Web Development</td>
+                        <td>2025-09-01</td>
+                        <td>8 weeks</td>
+                        <td>Jane Doe</td>
+                    </tr>
+                    <tr>
+                        <td>Data Science</td>
+                        <td>2025-10-01</td>
+                        <td>10 weeks</td>
+                        <td>John Smith</td>
+                    </tr>
+                    <tr>
+                        <td>Graphic Design</td>
+                        <td>2025-11-01</td>
+                        <td>6 weeks</td>
+                        <td>Emily Brown</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Course Preview</h2>
+            <figure>
+                <img src="https://via.placeholder.com/600x300" alt="Students learning in a classroom">
+                <figcaption>Engaging learning environment</figcaption>
+            </figure>
+            <figure>
+                <video controls width="600">
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <figcaption>Introduction to our courses</figcaption>
+            </figure>
+        </section>
+
+        <section id="register">
+            <h2>Register for a Course</h2>
+            <form action="/submit" method="post" novalidate>
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label for="full-name">Full Name:</label>
+                    <input type="text" id="full-name" name="full-name" placeholder="Enter your full name" required minlength="2" pattern="[A-Za-z\s]+">
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="example@domain.com" required autocomplete="email">
+
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" autocomplete="tel">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Course Selection</legend>
+                    <label for="course">Choose a Course:</label>
+                    <select id="course" name="course" required>
+                        <option value="">Select a course</option>
+                        <option value="web-dev">Web Development</option>
+                        <option value="data-science">Data Science</option>
+                        <option value="graphic-design">Graphic Design</option>
+                    </select>
+
+                    <label for="start-date">Preferred Start Date:</label>
+                    <input type="date" id="start-date" name="start-date" min="2025-09-01" required>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Additional Information</legend>
+                    <label for="experience">Prior Experience:</label>
+                    <textarea id="experience" name="experience" rows="4" placeholder="Describe any relevant experience" maxlength="500"></textarea>
+
+                    <label for="referral">How did you hear about us?</label>
+                    <input type="text" id="referral" name="referral" placeholder="E.g., Friend, Website" readonly value="Online">
+                </fieldset>
+
+                <input type="submit" value="Submit Registration">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Learning Platform. All rights reserved.</p>
+    </footer>
+</body>
+</html>
