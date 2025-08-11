@@ -1,143 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enhanced HTML5 Content & Form</title>
-</head>
-<body>
-    <header>
-        <h1>Explore Our Learning Platform</h1>
-        <nav>
-            <ul>
-                <li><a href="#courses">Courses</a></li>
-                <li><a href="#schedule">Schedule</a></li>
-                <li><a href="#register">Register</a></li>
-            </ul>
-        </nav>
-    </header>
+Enhanced HTML5 Content & Form Project
+Overview
+This project is a single HTML file (enhanced-form.html) created as part of an assignment to demonstrate proficiency in HTML5. It showcases the use of lists, tables, media elements, and a fully functional HTML5 form with native validation. The page is designed to be accessible, well-structured, and user-friendly, focusing on semantic HTML5 elements and form validation without JavaScript.
+Features
 
-    <main>
-        <section id="courses">
-            <h2>Our Courses</h2>
-            <p>Discover our range of educational offerings designed to enhance your skills.</p>
-            <ol>
-                <li>Web Development Fundamentals
-                    <ul>
-                        <li>HTML5 & CSS3</li>
-                        <li>JavaScript Basics</li>
-                    </ul>
-                </li>
-                <li>Data Science Essentials
-                    <ul>
-                        <li>Python for Data Analysis</li>
-                        <li>Machine Learning Basics</li>
-                    </ul>
-                </li>
-                <li>Graphic Design Mastery
-                    <ul>
-                        <li>Adobe Photoshop</li>
-                        <li>UI/UX Principles</li>
-                    </ul>
-                </li>
-            </ol>
-        </section>
+Structured Content: 
+Organized lists (ordered and unordered) to display course offerings.
+A table presenting a course schedule with clear, accessible formatting.
+Embedded media (image and video) with descriptive captions for an engaging user experience.
 
-        <section id="schedule">
-            <h2>Course Schedule</h2>
-            <table>
-                <caption>Upcoming Course Dates</caption>
-                <thead>
-                    <tr>
-                        <th>Course</th>
-                        <th>Start Date</th>
-                        <th>Duration</th>
-                        <th>Instructor</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Web Development</td>
-                        <td>2025-09-01</td>
-                        <td>8 weeks</td>
-                        <td>Jane Doe</td>
-                    </tr>
-                    <tr>
-                        <td>Data Science</td>
-                        <td>2025-10-01</td>
-                        <td>10 weeks</td>
-                        <td>John Smith</td>
-                    </tr>
-                    <tr>
-                        <td>Graphic Design</td>
-                        <td>2025-11-01</td>
-                        <td>6 weeks</td>
-                        <td>Emily Brown</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
 
-        <section>
-            <h2>Course Preview</h2>
-            <figure>
-                <img src="https://via.placeholder.com/600x300" alt="Students learning in a classroom">
-                <figcaption>Engaging learning environment</figcaption>
-            </figure>
-            <figure>
-                <video controls width="600">
-                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <figcaption>Introduction to our courses</figcaption>
-            </figure>
-        </section>
+HTML5 Form:
+Includes various input types: text, email, tel, date, select, and textarea.
+Uses fieldset and legend for logical grouping and accessibility.
+Implements HTML5 validation attributes like required, minlength, pattern, and min.
+Incorporates placeholder, autocomplete, and readonly for enhanced usability.
 
-        <section id="register">
-            <h2>Register for a Course</h2>
-            <form action="/submit" method="post" novalidate>
-                <fieldset>
-                    <legend>Personal Information</legend>
-                    <label for="full-name">Full Name:</label>
-                    <input type="text" id="full-name" name="full-name" placeholder="Enter your full name" required minlength="2" pattern="[A-Za-z\s]+">
 
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="example@domain.com" required autocomplete="email">
+Semantic HTML: Utilizes semantic tags (header, nav, main, section, footer, etc.) for clarity and accessibility.
+No JavaScript: All validation is handled natively by HTML5 attributes.
+No CSS: As per instructions, the file relies solely on HTML for structure and functionality.
 
-                    <label for="phone">Phone Number:</label>
-                    <input type="tel" id="phone" name="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" autocomplete="tel">
-                </fieldset>
+File Structure
 
-                <fieldset>
-                    <legend>Course Selection</legend>
-                    <label for="course">Choose a Course:</label>
-                    <select id="course" name="course" required>
-                        <option value="">Select a course</option>
-                        <option value="web-dev">Web Development</option>
-                        <option value="data-science">Data Science</option>
-                        <option value="graphic-design">Graphic Design</option>
-                    </select>
+enhanced-form.html: The main HTML file containing all content and the form.
 
-                    <label for="start-date">Preferred Start Date:</label>
-                    <input type="date" id="start-date" name="start-date" min="2025-09-01" required>
-                </fieldset>
+Usage
 
-                <fieldset>
-                    <legend>Additional Information</legend>
-                    <label for="experience">Prior Experience:</label>
-                    <textarea id="experience" name="experience" rows="4" placeholder="Describe any relevant experience" maxlength="500"></textarea>
+Clone or download the repository to your local machine.
+Open enhanced-form.html in a modern web browser to view the page.
+Interact with the form to test the input fields and HTML5 validation features.
 
-                    <label for="referral">How did you hear about us?</label>
-                    <input type="text" id="referral" name="referral" placeholder="E.g., Friend, Website" readonly value="Online">
-                </fieldset>
+Setup
+No additional setup is required. The HTML file is self-contained and uses external placeholders for media (image and video) to avoid local dependencies.
+Notes
 
-                <input type="submit" value="Submit Registration">
-            </form>
-        </section>
-    </main>
+The form's action attribute points to /submit, which is a placeholder. In a real application, this should point to a server-side endpoint.
+The media elements use external URLs for demonstration purposes. Replace with actual media files if needed.
+The form includes a novalidate attribute to allow testing without browser-enforced validation, but all fields have appropriate validation attributes for functionality.
 
-    <footer>
-        <p>&copy; 2025 Learning Platform. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+License
+© 2025 Learning Platform. All rights reserved.
