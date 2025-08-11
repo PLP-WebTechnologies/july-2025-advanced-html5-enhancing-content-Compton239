@@ -1,44 +1,143 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/ew7e64j9)
-# 📘 Assignment: Enhancing HTML5 Content & Mastering Forms
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced HTML5 Content & Form</title>
+</head>
+<body>
+    <header>
+        <h1>Explore Our Learning Platform</h1>
+        <nav>
+            <ul>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#register">Register</a></li>
+            </ul>
+        </nav>
+    </header>
 
-## Overview
+    <main>
+        <section id="courses">
+            <h2>Our Courses</h2>
+            <p>Discover our range of educational offerings designed to enhance your skills.</p>
+            <ol>
+                <li>Web Development Fundamentals
+                    <ul>
+                        <li>HTML5 & CSS3</li>
+                        <li>JavaScript Basics</li>
+                    </ul>
+                </li>
+                <li>Data Science Essentials
+                    <ul>
+                        <li>Python for Data Analysis</li>
+                        <li>Machine Learning Basics</li>
+                    </ul>
+                </li>
+                <li>Graphic Design Mastery
+                    <ul>
+                        <li>Adobe Photoshop</li>
+                        <li>UI/UX Principles</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
 
-This assignment focuses on elevating your HTML5 skills by working with advanced content elements and mastering the creation, structure, and validation of web forms. You will practice using lists, tables, and media to enrich page content, and then dive deep into building dynamic, user-friendly forms powered by native HTML5 features.
+        <section id="schedule">
+            <h2>Course Schedule</h2>
+            <table>
+                <caption>Upcoming Course Dates</caption>
+                <thead>
+                    <tr>
+                        <th>Course</th>
+                        <th>Start Date</th>
+                        <th>Duration</th>
+                        <th>Instructor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Web Development</td>
+                        <td>2025-09-01</td>
+                        <td>8 weeks</td>
+                        <td>Jane Doe</td>
+                    </tr>
+                    <tr>
+                        <td>Data Science</td>
+                        <td>2025-10-01</td>
+                        <td>10 weeks</td>
+                        <td>John Smith</td>
+                    </tr>
+                    <tr>
+                        <td>Graphic Design</td>
+                        <td>2025-11-01</td>
+                        <td>6 weeks</td>
+                        <td>Emily Brown</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
 
-## Objectives
+        <section>
+            <h2>Course Preview</h2>
+            <figure>
+                <img src="https://via.placeholder.com/600x300" alt="Students learning in a classroom">
+                <figcaption>Engaging learning environment</figcaption>
+            </figure>
+            <figure>
+                <video controls width="600">
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <figcaption>Introduction to our courses</figcaption>
+            </figure>
+        </section>
 
-You are expected to demonstrate the ability to:
+        <section id="register">
+            <h2>Register for a Course</h2>
+            <form action="/submit" method="post" novalidate>
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label for="full-name">Full Name:</label>
+                    <input type="text" id="full-name" name="full-name" placeholder="Enter your full name" required minlength="2" pattern="[A-Za-z\s]+">
 
-* Use lists and tables effectively to organize content for clarity and accessibility.
-* Embed media content such as images, audio, or video using semantic HTML5 elements.
-* Build structured HTML5 forms that are both usable and visually intuitive.
-* Apply various HTML5 form attributes to improve user interaction.
-* Use built-in validation techniques to minimize incorrect data input without relying on JavaScript.
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="example@domain.com" required autocomplete="email">
 
-## Instructions
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" autocomplete="tel">
+                </fieldset>
 
-Design a simple multi-section web page that showcases the use of lists, tables, and media, followed by a complete HTML5 form. The page should reflect thoughtful structure, usability, and clarity.
+                <fieldset>
+                    <legend>Course Selection</legend>
+                    <label for="course">Choose a Course:</label>
+                    <select id="course" name="course" required>
+                        <option value="">Select a course</option>
+                        <option value="web-dev">Web Development</option>
+                        <option value="data-science">Data Science</option>
+                        <option value="graphic-design">Graphic Design</option>
+                    </select>
 
-Your form should include various input types, make use of labels and fieldsets for accessibility, and apply HTML5 validation rules through attributes like `required`, `type`, `minlength`, `pattern`, and others.
+                    <label for="start-date">Preferred Start Date:</label>
+                    <input type="date" id="start-date" name="start-date" min="2025-09-01" required>
+                </fieldset>
 
-Avoid using JavaScript for validation—rely solely on native HTML5 capabilities.
+                <fieldset>
+                    <legend>Additional Information</legend>
+                    <label for="experience">Prior Experience:</label>
+                    <textarea id="experience" name="experience" rows="4" placeholder="Describe any relevant experience" maxlength="500"></textarea>
 
-## Deliverables
+                    <label for="referral">How did you hear about us?</label>
+                    <input type="text" id="referral" name="referral" placeholder="E.g., Friend, Website" readonly value="Online">
+                </fieldset>
 
-Submit a single HTML file named `enhanced-form.html`. It should include:
+                <input type="submit" value="Submit Registration">
+            </form>
+        </section>
+    </main>
 
-* Well-structured content using lists, tables, and media.
-* A complete HTML5 form including a variety of input fields.
-* Correct use of form attributes such as `placeholder`, `required`, `autocomplete`, and `readonly`.
-* HTML5 validation features implemented correctly across all relevant fields.
-* A clear, accessible layout using semantic tags.
-
-## Tips
-
-* Proper and meaningful use of lists, tables, and media.
-* Clarity and accessibility of form structure.
-* Correct use of form elements and attributes.
-* Effective application of native HTML5 validation.
-* Clean, well-indented, and maintainable HTML code.
-
-
+    <footer>
+        <p>&copy; 2025 Learning Platform. All rights reserved.</p>
+    </footer>
+</body>
+</html>
